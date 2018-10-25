@@ -1,0 +1,66 @@
+<section>
+  <div class="e-container">
+    <h1>Form Validations</h1>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm" novalidate="" class="was-validated">
+			
+      <mat-form-field>
+        <input 
+          matInput 
+          placeholder="Input" 
+          type="text" 
+          placeholder="Email address" 
+          name="email" 
+          [(ngModel)]="myitemElement.emailAddress"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" 
+          required 
+          #email="ngModel">
+        <mat-error *ngIf="email.touched && email.errors?.required">
+          The email address is required
+        </mat-error>
+        <mat-error *ngIf="email.touched && email.errors?.pattern">
+          The email address is wrong
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select [(ngModel)]="myitemElement.subscription" name="subscriptions" class="form-control">
+          <mat-option *ngFor="let subs of subscriptionsCombo" [value]="subs.subscription">{{ subs.subscriptionName }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <input 
+          matInput 
+          placeholder="Password" 
+          class="form-control" 
+          type="password" 
+          name="password" 
+          id="inputPassword" 
+          minlength="8"
+          maxlength="50" 
+          required 
+          [(ngModel)]="myitemElement.password" 
+          #password="ngModel" 
+          pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+        <mat-error *ngIf="password.touched && password.errors?.required ">
+          The password is required
+				</mat-error>
+        <mat-error *ngIf="password.errors?.minlength">
+          The minimun length of the password is {{ password.errors.minlength.requiredLength }} characters.
+				</mat-error>
+				<mat-error *ngIf="password.errors?.pattern">
+						The password must have a special character or number.
+				</mat-error>
+      </mat-form-field>
+
+      <div class="button-row">
+        <button type="submit" color="primary" mat-raised-button [disabled]="!f.valid">
+					Submit
+        </button>
+        <button color="secondary" mat-raised-button (click)="onClearForm(f)">
+          Clear
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+</section>
