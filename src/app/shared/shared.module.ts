@@ -12,7 +12,7 @@ import { ClearDialogComponent } from './components/clear-dialog/clear-dialog.com
     CommonModule,
     MaterialModule,
     RouterModule,
-    FlexLayoutModule
+    FlexLayoutModule,
   ],
   declarations: [
     HeaderComponent,
@@ -22,7 +22,7 @@ import { ClearDialogComponent } from './components/clear-dialog/clear-dialog.com
     CommonModule,
     MaterialModule,
     HeaderComponent,
-    FlexLayoutModule
+    FlexLayoutModule,
   ]
 })
 

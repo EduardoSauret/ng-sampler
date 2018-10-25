@@ -1,0 +1,28 @@
+<h2>
+  List of Recipes
+</h2>
+<div fxLayout="column">
+    <button mat-raised-button color="primary">Add new recipe</button>
+    <br>
+</div>
+<hr>
+<div fxLayout="column">
+  <div fxFlex>
+    <a href="" *ngFor="let recipe of recipes">
+      <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="14px">
+        <div fxFlex="30">
+          <img 
+            class="thumbnail" 
+            [src]="{{recipe.imgPath}}">
+        </div>
+        <div fxFlex="70">
+          <h4>{{recipe.name}}</h4>
+          <p>{{recipe.description}}</p>
+        </div>
+      </div>
+      <hr>
+    </a>
+  </div>
+</div>
+
+<app-recipe-item></app-recipe-item>

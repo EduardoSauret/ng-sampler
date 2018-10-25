@@ -9,16 +9,30 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClearDialogComponent } from './shared/components/clear-dialog/clear-dialog.component';
-import {HttpClientModule } from '@angular/common/http';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RecipesComponent } from './modules/recipes/recipes.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { RecipeListComponent } from './modules/recipes/recipe-list/recipe-list.component';
+import { RecipeItemComponent } from './modules/recipes/recipe-list/recipe-item/recipe-item.component';
+import { RecipeDetailComponent } from './modules/recipes/recipe-detail/recipe-detail.component';
+import { ShoppingListComponent } from './modules/shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './modules/shopping-list/shopping-edit/shopping-edit.component';
+import { RecipesPageComponent } from './shared/pages/recipes-page/recipes-page.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ToDoListComponent,
     FormsValidatorsComponent,
-    RecipesComponent
+    RecipesComponent,
+    RecipeListComponent,
+    RecipeItemComponent,
+    RecipeDetailComponent,
+    ShoppingListComponent,
+    ShoppingEditComponent,
+    RecipesPageComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +41,8 @@ import { RecipesComponent } from './modules/recipes/recipes.component';
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent],
