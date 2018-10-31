@@ -18,7 +18,6 @@ import { RecipeItemComponent } from './modules/recipes/recipe-list/recipe-item/r
 import { RecipeDetailComponent } from './modules/recipes/recipe-detail/recipe-detail.component';
 import { ShoppingListComponent } from './modules/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './modules/shopping-list/shopping-edit/shopping-edit.component';
-import { RecipesPageComponent } from './shared/pages/recipes-page/recipes-page.component';
 
 
 @NgModule({
@@ -32,7 +31,6 @@ import { RecipesPageComponent } from './shared/pages/recipes-page/recipes-page.c
     RecipeDetailComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    RecipesPageComponent
   ],
   imports: [
     BrowserModule,

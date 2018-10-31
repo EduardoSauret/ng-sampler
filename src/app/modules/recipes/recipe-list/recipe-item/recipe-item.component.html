@@ -1,3 +1,12 @@
-<p>
-  recipe-item works!
-</p>
+<a href="">
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="14px">
+    <div fxFlex="30">
+      <img class="thumbnail" [src]="recipe.imgPath">
+    </div>
+    <div fxFlex="70">
+      <h4>{{recipe.name}}</h4>
+      <p>{{recipe.description}}</p>
+    </div>
+  </div>
+  <hr>
+</a>

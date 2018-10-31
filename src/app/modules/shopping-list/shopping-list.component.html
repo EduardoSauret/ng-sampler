@@ -1,9 +1,19 @@
 <h1>
-  Shopping-list works!
+  Shopping List!
 </h1>
-<app-shopping-edit></app-shopping-edit>
-<hr>
-<h4>The list</h4>
+<div fxLayout="column">
+  <div fxFlex>
+      <app-shopping-edit></app-shopping-edit>
+  </div>
+  <div fxFlex>
+      <mat-list role="list">
+          <div *ngFor="let ingredient of ingredients" >
+            <mat-list-item role="listitem">{{ingredient.name}}: ({{ingredient.amount}})</mat-list-item>
+            <mat-divider></mat-divider>
+          </div>
+        </mat-list>
+  </div>
+</div>
 
 
 

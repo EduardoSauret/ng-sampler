@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 html *
 {
@@ -13,4 +13,20 @@ body {
 hr {
     border-top: 1px;
     border-color: #ddd;
+}
+
+.padding {
+    padding: 28px;
+}
+
+.padding {
+    padding: 28px;
+}
+
+.padding-horizontal {
+    padding: 0px 28px;
+}
+
+.padding-horizontal {
+    padding: 28px 0px;
 }

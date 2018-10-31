@@ -9,12 +9,20 @@ import { Recipe } from '../recipe.model';
 export class RecipeListComponent implements OnInit {
 
   recipes: Recipe[] = [
-    new Recipe('Chilaquiles', 'Mucha tortilla, mucha salsa, mucho queso, mucho frijoles.', 'this is the path'),
-    new Recipe('Fajitas', 'Mucha tortilla, mucha salsa, mucho queso, mucho frijoles.', 'this is the path'),
-    new Recipe('Pozole', 'Mucha tortilla, mucha salsa, mucho queso, mucho frijoles.', 'this is the path')
+    new Recipe('Chilaquiles',
+    'Mucha tortilla, mucha salsa, mucho queso, mucho frijoles.',
+    'https://pioneerwoman.files.wordpress.com/2013/03/8523710988_5e66ec47dd_z.jpg?w=630&h=419'),
+    new Recipe(
+      'Fajitas',
+      'Mucha tortilla, mucha salsa, mucho queso, mucho frijoles.',
+      'https://pioneerwoman.files.wordpress.com/2013/03/8523710988_5e66ec47dd_z.jpg?w=630&h=419'),
+    new Recipe(
+      'Pozole',
+      'Mucha tortilla, mucha salsa, mucho queso, mucho frijoles.',
+      'https://pioneerwoman.files.wordpress.com/2013/03/8523710988_5e66ec47dd_z.jpg?w=630&h=419')
   ];
 
-  constructor( ) { }
+  constructor() { }
 
   ngOnInit() {
   }
