@@ -3,9 +3,14 @@
 </div>
 <div fxLayout='row' fxLayout.lt-md="column" class="zero">
     <div fxFlex="40" class="one">
-      <app-recipe-list></app-recipe-list>
+      <app-recipe-list (selectedForParent)="selectedRecipe = $event"></app-recipe-list>
     </div>
     <div fxFlex="60" class="two">
-      <app-recipe-detail></app-recipe-detail>
+      <app-recipe-detail 
+        *ngIf="selectedRecipe; else infoText" 
+        [recipe]="selectedRecipe"></app-recipe-detail>
+        <ng-template #infoText>
+          <p>Please select a recipe</p>
+        </ng-template>
     </div>
   </div>

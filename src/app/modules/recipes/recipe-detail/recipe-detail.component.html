@@ -1,8 +1,8 @@
-<div fxLayout="column">
+<div class="padding" fxLayout="column">
   <div fxFlex="" class="one">
-    <img src="" class="img-responsive">
+    <img [src]="recipe.imgPath">
   </div>
-  <div fxFlex="" class="two">Recipe Name</div>
+  <h2 fxFlex="" class="two">{{recipe.name}}</h2>
   <div fxFlex="" class="">
     <mat-form-field>
       <mat-select placeholder="Manage Recipe">
@@ -12,6 +12,6 @@
       </mat-select>
     </mat-form-field>
   </div>
-  <div fxFlex="" class="">Description</div>
-  <div fxFlex="" class="">Ingredients</div>
+  <div fxFlex="" class="">{{recipe.description}}</div>
+  <div fxFlex="" class="">{{recipe.ingredients}}</div>
 </div>

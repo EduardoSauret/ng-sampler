@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Recipe } from '../recipe.model';
 
 export interface Option {
   value: string;
@@ -11,6 +12,8 @@ export interface Option {
   styleUrls: ['./recipe-detail.component.scss']
 })
 export class RecipeDetailComponent implements OnInit {
+
+  @Input() recipe: Recipe;
 
   options: Option[] = [
     {value: 'To Shopping List', id: 1},
