@@ -2,15 +2,15 @@
   <form>
     <div fxLayout="row">
       <mat-form-field fxFlex>
-        <input matInput type="text" id="name" placeholder="Name">
+        <input matInput type="text" id="name" placeholder="Name" #inputName>
       </mat-form-field>
       <mat-form-field fxFlex>
-        <input matInput type="number" id="amount" placeholder="Amount">
+        <input matInput type="number" id="amount" placeholder="Amount" #inputAmount>
       </mat-form-field>
-      <br>  
+      <br>
     </div>
-    <button mat-raised-button color="basic" type="submit">Add</button>
-      <button mat-raised-button color="primary" type="button">Clear</button>
-      <button mat-raised-button color="accent" type="button">Delete</button>
+    <button mat-raised-button color="basic" type="submit" (click)="addIngredient()">Add</button>
+    <button mat-raised-button color="primary" type="button">Clear</button>
+    <button mat-raised-button color="accent" type="button" (click)="deleteIngredient()">Delete</button>
   </form>
 </div>

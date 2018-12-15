@@ -3,12 +3,15 @@
 </h1>
 <div fxLayout="column">
   <div fxFlex>
-      <app-shopping-edit></app-shopping-edit>
+      <app-shopping-edit
+        (ingredientAdded)="ingWasAdded($event)"></app-shopping-edit>
   </div>
   <div fxFlex>
       <mat-list role="list">
           <div *ngFor="let ingredient of ingredients" >
-            <mat-list-item role="listitem">{{ingredient.name}}: ({{ingredient.amount}})</mat-list-item>
+            <mat-list-item role="listitem">
+              {{ingredient.name}}: ({{ingredient.amount}})
+            </mat-list-item>
             <mat-divider></mat-divider>
           </div>
         </mat-list>
